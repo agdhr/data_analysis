@@ -20,7 +20,9 @@ The difference between the observed value $y_i$ and the corresponding fitted val
 > $\epsilon_i = y_i - \hat{y_i}$
 
 
-![Scatter diagram of oxygen purity versus hydrocarbon level from Table 1](https://github.com/agdhr/data_analysis/blob/main/linear_regression/fig_4.jpg)
+![Scatter diagram of Y versus X](https://github.com/agdhr/data_analysis/blob/main/linear_regression/fig_4.jpg)
+
+![Scatter diagram of Y versus X](D://z/data_analysis/linear_regression/raw/fig_4.jpg)
 
 Sum of the squares of the deviations of the observations (*$\epsilon_i$*):
 $S = \displaystyle\sum_{i=1}^n \epsilon_i^2 = \displaystyle\sum_{i=1}^n (y_i - \hat{\beta_0} - \hat{\beta_1} . x_i)^2$ 
@@ -43,8 +45,8 @@ These are called the least-squares normal equations. The solution to estimate $\
 
 > $\hat{\beta_0} = \bar{y} + \hat{\beta_i} \bar{x}$
 
-where $\bar{Y}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n y_i$ and
-$\bar{X}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n x_i$ are the mean of X and Y, respectively.
+where $\bar{y}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n y_i$ and
+$\bar{x}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n x_i$ are the mean of X and Y, respectively.
 
 To find $\hat{\beta_1}$: 
 
