@@ -56,7 +56,7 @@ where $Sxx = \displaystyle\sum_{i=1}^n x_i^2 - \frac{(\displaystyle\sum_{i=1}^n 
 and
 $Sxy = \displaystyle\sum_{i=1}^n y_i .x_i - \frac{(\displaystyle\sum_{i=1}^n y_i) \times (\displaystyle\sum_{i=1}^n x_i)}{n}$
 
-Since the denominator is the corrected sum of squares of the x i and the numerator is the corrected sum of cross products of $x_i$ and $y_i$, we may write $Sxx$ and $Sxy$ in a more compact notation as:
+Since the denominator is the corrected sum of squares of the $x_i$ and the numerator is the corrected sum of cross products of $x_i$ and $y_i$, we may write $Sxx$ and $Sxy$ in a more compact notation as:
 
 > $Sxx = \displaystyle\sum_{i=1}^n (x_i -\bar{x})^2$
 
