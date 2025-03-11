@@ -60,7 +60,7 @@ Since the denominator is the corrected sum of squares of the x i and the numerat
 
 > $Sxx = \displaystyle\sum_{i=1}^n (x_i -\bar{x})^2$
 
-> $Sxy = \displaystyle\sum_{i=1}^n y_i (x_i - \bar{x})$
+> $Sxy = \displaystyle\sum_{i=1}^n (y_i - \bar{y}) (x_i - \bar{x})$
 
 The fitted or estimated regression line is therefore
 
