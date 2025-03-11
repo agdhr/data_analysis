@@ -4,39 +4,61 @@
 Simple linear regression (SLR) analysis is a statistical technique for investigating and modeling the relationship between two variables: Y and X variables. Customarily, *X* is called the independent (predictor or regressor) variable and *Y* is called the dependent (response) variable.
 
 ## Empirical Model
-Assume that the expected value of Y is a linear function of X. The data points generally, but not exactly, fall along a straight line:
+Assume that the expected value of Y is a linear function of X. The data points generally, but not exactly, fall along a straight line (Figure 1-left):
 
 > $Y = \beta_0 + \beta_1  X + \epsilon$ 
 
 where the intercept β<small>0</small> and the slope β<small>1</small> are unknown regression coefficients, and *$\epsilon$* = the random error term. 
 
-A criterion for estimating the regression coefficients is called the method of ***least squares***.
 
-From Equation 1, here to estimate β<small>0</small>:
+## Least-Squares Estimation
+A criterion for estimating the regression coefficients is called the method of ***least squares***. 
+The sum of the squares of the differences *$\epsilon$* between the observations $y_i$ and the straight line is a ***minimum***.
 
-> $\beta_0 = \bar{Y} + \beta_i \bar{X}$
+The difference between the observed value $y_i$ and the corresponding fitted value $\hat{y_i}$ is a residual. Mathematically the $i$-th residual is:
 
-where $\bar{Y}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n Y_i$ is the mean of Y,
-$\bar{X}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n X_i$ is the mean of X.
-and $i = 1, 2, ..., n$, $n$ is the number of observations.
+> $\epsilon_i = y_i - \hat{y_i}$
 
-To find $\beta$<small>1</small>: 
 
-> $\beta_1 = \frac{\displaystyle\sum_{i=1}^n Y_i .X_i - \frac{(\displaystyle\sum_{i=1}^n Y_i) \times (\displaystyle\sum_{i=1}^n X_i)}{n}}{\displaystyle\sum_{i=1}^n X_i^2 - \frac{(\displaystyle\sum_{i=1}^n X_i)^2}{n}}$
+![Scatter diagram of oxygen purity versus hydrocarbon level from Table 1](d://z/data_analysis/linear_regression/raw/fig_4.jpg)
+
+Sum of the squares of the deviations of the observations (*$\epsilon_i$*):
+$S = \displaystyle\sum_{i=1}^n \epsilon_i^2 = \displaystyle\sum_{i=1}^n (y_i - \hat{\beta_0} - \hat{\beta_1} . x_i)^2$ 
+
+with $i = 1, 2, ..., n$, with $n$ is the number of observations.
+
+$\hat{\beta_0}$ and $\hat{\beta_1}$ must satisfy:
+
+$\frac{\partial S}{\partial \beta_0}|$ <small>$\hat{\beta_0}$</small>, <small>$\hat{\beta_1}$</small> = $-2 \displaystyle\sum_{i=1}^n (y_i - \hat{\beta_0} - \hat{\beta_1} . x_i) = 0$
+
+$\frac{\partial S}{\partial \beta_1}|$ <small>$\hat{\beta_0}$</small>, <small>$\hat{\beta_1}$</small> = $-2 \displaystyle\sum_{i=1}^n (y_i - \hat{\beta_0} - \hat{\beta_1} . x_i) x_i = 0$
+
+Simplifying these two equations yields:
+
+$n \hat{\beta_0} + \hat{\beta_1} \displaystyle\sum_{i=1}^n x_i = \displaystyle\sum_{i=1}^n y_i$
+
+$\hat{\beta_0} \displaystyle\sum_{i=1}^n x_i + \hat{\beta_1} \displaystyle\sum_{i=1}^n x_i^2 = \displaystyle\sum_{i=1}^n x_i y_i$
+
+These are called the least-squares normal equations. The solution to estimate $\beta_0$:
+
+> $\hat{\beta_0} = \bar{y} + \hat{\beta_i} \bar{x}$
+
+where $\bar{Y}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n y_i$ and
+$\bar{X}$ = $(\frac{1}{n})$ $\displaystyle\sum_{i=1}^n x_i$ are the mean of X and Y, respectively.
+
+To find $\hat{\beta_1}$: 
+
+> $\beta_1 = \frac{Sxy}{Sxx}$
+
+where $Sxx = \displaystyle\sum_{i=1}^n x_i^2 - \frac{(\displaystyle\sum_{i=1}^n x_i)^2}{n}$
+and
+$Sxy = \displaystyle\sum_{i=1}^n y_i .x_i - \frac{(\displaystyle\sum_{i=1}^n y_i) \times (\displaystyle\sum_{i=1}^n x_i)}{n}$
 
 The fitted or estimated regression line is therefore
 
-> $\hat{Y} = \beta_i + \beta_1  X$
+> $\hat{y} = \hat{\beta_0} + \hat{\beta_1}  x$
 
-Note that each pair of observations satisfies the relationship
-
-> $Y_i = \beta_i + \beta_1  X_i + \epsilon$
-
-The difference between the observed value $Y_i$ and the corresponding fitted value $\hat{Y_i}$ is a residual. Mathematically the $i$-th residual is
-
-> $e_i = Y_i - \hat{Y_i}$
-
-## Representation
+## Sample problem
 As an example of a problem, consider the data in Table 1, y is the purity of oxygen produced in a chemical distillation process, and x is the percentage of hydrocarbons present in the main condenser of the distillation unit. The 20 observations are plotted in Figure 1, called a ***scatter diagram***.
 
 **Table 1. Oxygen and Hydrocarbon Levels**
@@ -67,7 +89,7 @@ As an example of a problem, consider the data in Table 1, y is the purity of oxy
 
 The data points generally, but not exactly, fall along a straight line, see Figure 2.
 
-![Scatter diagram of oxygen purity versus hydrocarbon level from Table 1](d://z/data_analysis/linear_regression/raw/fig1_1.jpg)
+
 
 **Figure 1.** Scatter diagram of oxygen purity versus hydrocarbon level from Table 1.
 
