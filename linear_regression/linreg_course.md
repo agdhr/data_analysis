@@ -20,7 +20,7 @@ The difference between the observed value $y_i$ and the corresponding fitted val
 > $\epsilon_i = y_i - \hat{y_i}$
 
 
-![Scatter diagram of oxygen purity versus hydrocarbon level from Table 1](d://z/data_analysis/linear_regression/raw/fig_4.jpg)
+![Scatter diagram of oxygen purity versus hydrocarbon level from Table 1](https://github.com/agdhr/data_analysis/blob/main/linear_regression/fig_4.jpg)
 
 Sum of the squares of the deviations of the observations (*$\epsilon_i$*):
 $S = \displaystyle\sum_{i=1}^n \epsilon_i^2 = \displaystyle\sum_{i=1}^n (y_i - \hat{\beta_0} - \hat{\beta_1} . x_i)^2$ 
