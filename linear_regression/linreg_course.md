@@ -88,16 +88,12 @@ As an example of a problem, consider the data in Table 1, y is the purity of oxy
 |19   | 1.43 | 94.98 |
 |20   | 0.95 | 87.33 |
 
-
-The data points generally, but not exactly, fall along a straight line, see Figure 2.
-
-
-
-**Figure 1.** Scatter diagram of oxygen purity versus hydrocarbon level from Table 1.
+_
 
 ![Straight-line relationship between oxygen purity y and  hydrocarbon level x](d://z/data_analysis/linear_regression/raw/fig_2.jpg)
 
-**Figure 2.** Straight-line relationship between oxygen purity y and  hydrocarbon level x.
+![Straight-line relationship between oxygen purity y and  hydrocarbon level x](https://github.com/agdhr/data_analysis/blob/main/linear_regression/fig_2.jpg)
 
+## Reference:
 
-Objectives: (a) Data description, (b) Prediction and estimation, (c) Process control
+Montgomery, D. C., & Runger, G. C. (2014). Applied Statistics and Probability for Engineers, 6th edition. John Wiley & Sons, Inc.
